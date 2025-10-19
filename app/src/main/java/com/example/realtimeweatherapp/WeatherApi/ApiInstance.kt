@@ -7,6 +7,8 @@ import dagger.hilt.components.SingletonComponent
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
+import com.example.realtimeweatherapp.WeatherApi.WeatherApi
+
 
 @Module
 @InstallIn(SingletonComponent::class)
@@ -26,7 +28,4 @@ object ApiInstance {
     fun provideWeatherApi(retrofit: Retrofit): WeatherApi{
         return retrofit.create( WeatherApi::class.java)
     }
-
-
-
 }

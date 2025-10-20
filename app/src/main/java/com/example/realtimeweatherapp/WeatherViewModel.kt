@@ -42,4 +42,8 @@ class WeatherViewModel @Inject constructor(
      }
 
     }
+
+    fun resetWeather() {
+        _weather.value = null
+    }
 }
